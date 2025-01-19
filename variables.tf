@@ -4,6 +4,12 @@ variable "aws_region" {
   default     = "us-east-1"
 }
 
+variable "aws_profile" {
+  type        = string
+  description = "AWS profile to use for access."
+  default     = "myprofile"
+}
+
 variable "aws_azs" {
   type        = list(string)
   description = "AWS Availability Zones"
@@ -54,7 +60,7 @@ variable "sg_ingress_public" {
 variable "company" {
   type        = string
   description = "Company name for resource tagging"
-  default     = "CT"
+  default     = "Company"
 }
 
 variable "project" {
@@ -72,7 +78,7 @@ variable "naming_prefix" {
 variable "environment" {
   type        = string
   description = "Environment for deployment"
-  default     = "DEV"
+  default     = "dev"
 }
 
 variable "instance_key" {
